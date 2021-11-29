@@ -1,0 +1,312 @@
+.home-right img {
+    width: 100%;
+  }
+  .home-container {
+    background-color: rgb(133, 116, 92);
+    padding: 0%;
+  }
+  .home {
+    padding: 0%!important;
+  }
+  body{
+    background-image: url(../assets/ZenBG.png);
+  }
+
+  @font-face {
+  font-family: sultan;
+  src: url(../fuentes/tipografias/sultan/SultanCafe_PERSONAL_USE.ttf);
+  }
+  @font-face {
+  font-family: viking;
+  src: url(../fuentes/tipografias/viking/VikingGothicW01-Regular.woff);
+  }
+  @font-face {
+  font-family:mjolnir ;
+  src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
+  }
+  /*------------------- MENU ---------------------------*/
+  .sticky-top{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+  .nav-bar {  
+    padding-top: 1%;
+    padding-left: 5%;
+    background-color: #6c5d35;
+    position: fixed;
+    z-index: 99999;
+  }
+  .sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; /* Fijo */
+    z-index: 99999; /* Que se ponga por encima */
+    top: 0; /* Fijo arriba */
+    left: 0;
+    background-color: #6c5d35;
+    overflow-x: hidden; /* No scroll horizontal */
+    padding-top: 60px; 
+    transition: 0.5s; /* 0.5 transicion silde */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* MENU LINKS */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-family: sultan;
+    text-decoration: none;
+    font-size: 50px;
+    color: #e8d6bb;
+    display: block;
+    transition: 0.3s;
+   }
+  
+  /* HOVER MENU LINKS */
+  .sidenav a:hover {
+    color: #e69612;
+  }
+  
+  .menu-btn  {
+    font-size:40px;
+    cursor:pointer;
+    color: #e8d6bb;
+  }
+  .menu-btn:hover{
+    color: #e69612;
+  }
+  
+  /* BTN CERRAR SIDE MENU */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: #e8d6bb;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  /*------------------- Tienda---------------------------*/
+
+  .fabrica-container {
+    padding: 0% !important;
+  }
+  
+  .fabrica-container {
+    padding: 0% !important;
+    background-image: url(../assets/todas.jpg);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    float: none !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.tituloPagina{
+  font-family: sultan;
+  font-size: 12em;
+  color: #e8d6bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*------------------- PRODUCTOS SUGERIDOS---------------------------*/
+.productos{
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+#productosSugeridos{
+    padding:3% ;
+    background-image: url(../assets/ZenBG.png);
+  }
+  .subtitulos{
+    font-family: viking;
+    font-size:5em;
+    text-align:center;
+    color: #6c5d35;
+  }
+  .imgProductos{
+    width: 70%;
+  }
+  .productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+  .productosUltima{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1%;
+  }
+  .textoProductoDestacados{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #6c5d35;
+  }
+  .btnCarrito{
+    background-color: #6c5d35;
+    color: #e8d6bb;
+    font-family: 'Raleway', sans-serif;
+    border: 0px;
+    border-radius: 3px;
+    height:40px;
+    width: 60%;
+  }
+  .btnCarrito:hover{
+    color: #ec9616;
+  }
+  .verMas{
+     display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .divBotellas{
+    display: flex;
+    justify-content: space-between;
+  }
+  /*------------------- MAPA---------------------------*/
+  .row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  footer{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  #mapa{
+    margin-top: 0.5%;
+    background-image: url(../assets/ZenBG\ \(1\).png);
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .mapaIframe{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:1%;
+    margin-bottom:1%;
+  }
+#direccion{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding-left: 50px;
+}
+.tituloDireccion{
+margin-top: 6%;
+}
+.textoDireccion{
+font-family: 'Raleway', sans-serif;
+font-size: 1.2em;
+color: #6c5d35;
+text-align: center;
+display: flex;
+justify-content: center;
+}
+/*-------------------COMUNIDAD---------------------------*/
+#comunidad{
+background-image: url(../assets/ZenBG.png);
+}
+.textoSuscripcion{
+font-family: viking;
+font-size: 3em;
+color: #6c5d35;
+text-align: center;
+display: flex;
+justify-content: center;
+}
+.formSuscripcion{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#suscripcion{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.email{
+font-family:'Raleway', sans-serif; ;
+color: #6c5d35;
+font-size: 1em;
+}
+.input{
+width: 50%;
+background-color: rgba(0,0,0,0);
+border: 1px solid #6c5d35;
+border-radius: 5px0;
+margin-bottom: 2%;
+}
+.btnSubmit{
+background-color: #6c5d35;
+color: #e8d6bb;
+font-family: 'Raleway', sans-serif;
+border: 0px;
+border-radius: 3px;
+height:40px;
+width: 50%;
+}
+.btnSubmit:hover{
+color: #ec9616;
+}
+.cervezaBoar{
+font-family: mjolnir;
+font-size:2em;
+font-weight: lighter;
+color: #6c5d35;
+text-align: center;
+letter-spacing: 2px;
+}
+.redes{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.redesBoton{
+width: 10%;
+display: flex;
+justify-content: center;
+}
+i{
+font-size: 2em;
+color: #6c5d35;
+}
+.footerFinal{
+  background-color: #6c5d35;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.textoFooter{
+  font-family: 'Raleway', sans-serif;
+  color: #e8d6bb;
+  font-size:1em;
+  text-align: center;
+}

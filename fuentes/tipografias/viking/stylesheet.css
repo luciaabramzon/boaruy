@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'VikingGothicW01';
+    src: url('VikingGothicW01-Regular.eot');
+    src: url('VikingGothicW01-Regular.eot?#iefix') format('embedded-opentype'),
+        url('VikingGothicW01-Regular.woff2') format('woff2'),
+        url('VikingGothicW01-Regular.woff') format('woff'),
+        url('VikingGothicW01-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
