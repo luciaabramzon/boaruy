@@ -124,7 +124,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 .cart a{
   display: flex;
   justify-content: flex-end;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 32px 8px 8px;
   font-family: sultan;
   text-decoration: none;
   font-size: 50px;
@@ -429,6 +429,7 @@ letter-spacing: 2px;
 display: flex;
 flex-direction: row;
 justify-content: center;
+margin-bottom: 2%;
 }
 .redesBoton{
 width: 10%;
