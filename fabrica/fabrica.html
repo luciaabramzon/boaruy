@@ -5,6 +5,7 @@
     <title>BOAR</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name ="Copyright" content ="derechos reservados">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/0cc025511d.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="fabrica.css">
@@ -15,39 +16,35 @@
 <body>
 <!---------------------------------- NAV BAR-------------------------------------------------------------->
 <header class="sticky-top">
-<nav class="col-lg-12 nav-bar">
-    <div id="side-menu" class="sidenav ">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../home/index.html">quienes somos</a>
-        <a href="../fabrica/fabrica.html">fabrica</a>
-        <a href="../cerveceria/cerveceria.html">cerveceria</a>
-        <a href="../tienda/tienda.html">tienda</a>
-        <a href="../carrito/carrito.html">carrito</a>
-      </div>
-      <span class="menu-btn" onclick="openNav()">&#9776;</span>
-</nav>
-</header>
+    <nav class="nav-bar">
+        <div class="nav1">
+        <div class="col-3 nav1">
+        <div id="side-menu" class="sidenav ">
+            <a href="javascript:void(0)" class="closebtn btnClose" onclick="closeNav()">x</a>
+            <a href="../index.html">quienes somos</a>
+            <a href="../fabrica/fabrica.html">fabrica</a>
+            <a href="../cerveceria/cerveceria.html">cerveceria</a>
+            <a href="../tienda/tienda.html">tienda</a>
+            
+          </div>
+          <span class="menu-btn" onclick="openNav()"><img class="menuBot" src="../assets//menu.svg"></span>
+        </div>
+        <div class=" boarNav col-6"> 
+            <p>Boar</p>
+            </div>
+        <div class="col-3 cart"> 
+            <a href="../carrito/carrito.html"><img src="../assets/Carrito.svg" class="bi bi-cart2" id="btnCart"><b id=qCarritoBtn></b></a>
+        </div>
+    </div>
+    </nav>
+    </header>
     
 <!---------------------------------- FABRICA-------------------------------------------------------------->
     <main>
         <div class="col-lg-12 fabrica-container row">
             <h1 class="tituloPagina">fábrica</h1>
         </div>
-        <div class="fabrica row">
-            <div class="col-lg-6 col-lg-offset-1 fabrica-left ">
-                <div class="col-lg-10">
-                    <h1  class="fabricaTitulo row" >La fabrica</h1>
-                </div>
-                <div class="col-lg-10">
-                    <p class="fabricaTexto row">
-                        En 2018 comenzó a funcionar nuestra fabrica ubicada en El Tesoro. Al dia de hoy contamos con una   capacidad de  producción de hasta 6 mil litros al mes (el equivalente a 9090 botellas de 660 ml).
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-5  fabrica-right">
-                <img src="../assets/galeria-1-grandecopy.png" alt="as">
-            </div>
-            </div>
+
        <!---------------------------------- COCINA 1-------------------------------------------------------------->     
           <div class=" col-lg-12 nuestraCocina row">
               <p class="tituloNuestraCocina">nuestra cocina</p>
@@ -77,6 +74,26 @@
                 <img class="imgFabricaGrande" src="../assets/fuego.jpg" alt="">
             </div>
         </div>
+        
+            <div class="">
+                 <div class="texto">
+                    <p class="fabricaTexto">
+                        En 2018 comenzó a funcionar nuestra fabrica ubicada en El Tesoro. Al dia de hoy contamos con una   capacidad de  producción de hasta 6 mil litros al mes (el equivalente a 9090 botellas de 660 ml).
+                    </p>
+                    <p class="fabricaTexto">
+                       Nuestro proceso de fermentación se realiza con levadura a 19° de temperatura, siendo esta la temperatura óptima para que la fermentación natural se realice sin gases agregados  haciendo que nuestras cervezas tengan una espumosidad con cuerpo, lo que  resalta los aromas de cada estilo.
+                    </p>
+                       <p class="fabricaTexto">   Finalmente el embotellado se realiza de forma manual, botella a botella, con levadura agregada para lograr el toque final de fermentación en botella, logrando darle mayor vida útil a nuestro producto sin la necesidad de agregarle conservantes.
+                    </p>    
+                    <p class="fabricaTexto">
+                    También contamos con  fermentación en barrica de roble que, anteriormente fueron utilizados para añejar whisky. Este proceso le da vida a nuestro Baltic Porter, que  cuenta con 1 año de fermentación en estas barricas, generándole un carácter fuerte ideal para tomar en eventos especiales.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="imagenFabrica row">
+                <img class="lateral" src="../assets/fabrica2.jpg" alt="">
+            </div>
         <!---------------------------------- CERVEZAS LATERAL------------------------------------------------------------->
         <div class="imagenLateral row">
             <img class="lateral" src="../assets/lateral-todas.jpg" alt="">
@@ -84,7 +101,7 @@
         <!---------------------------------- FOOTER-------------------------------------------------------------->
         <footer class="row">
             <div id="mapa">
-                <div class="col-lg-6 mapaIframe">
+                <div id="mapaNo" class="col-lg-6 mapaIframe">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.141343982789!2d-54.87268368504201!3d-34.90290228089592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95751d61dbd64023%3A0x29aaa60ab9ffb824!2sBOAR%20Cervecer%C3%ADa!5e0!3m2!1sen!2suy!4v1638134264451!5m2!1sen!2suy" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div id="direccion">
@@ -103,9 +120,12 @@
                 <form action="" id="suscripcion" class="col-lg-6">
                 <label for="Text" class="email">Ingresa tu correo electronico</label>
                 <input type="text" class="input">
-                <button type="submit" class="btnSubmit"> Enviar</button>
                 </form>
-            </div>
+                </div>
+                <div>
+                    <button class="btnSubmit" id="enviar"> Enviar</button>
+                    <p id="mensaje" style="display:none">GRACIAS POR TU SUSCRIPCION</p>
+                </div>
             <div>
                 <p class="cervezaBoar">#cervezaboar</p>
             </div> 
@@ -120,6 +140,10 @@
                 <p class="textoFooter">Diseño exclusivo para @cervezaboar powered by Martin Colaroff</p>
             </div>
             </footer>
-            
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../tienda/tienda.js"></script>
+    <script src="../carrito/carrito.js"></script>
+    <script src="../home/index.js"></script>
 </body> 

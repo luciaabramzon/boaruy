@@ -5,6 +5,7 @@
     <title>BOAR</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name ="Copyright" content ="derechos reservados">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/0cc025511d.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../carrito/carrito.css">
@@ -15,16 +16,26 @@
 <body>
 <!---------------------------------- NAV BAR-------------------------------------------------------------->
 <header class="sticky-top">
-<nav class="col-lg-12 nav-bar">
+<nav class=" nav-bar">
+    <div class="nav1">
+    <div class="col-3 nav1">
     <div id="side-menu" class="sidenav ">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../home/index.html">quienes somos</a>
+        <a href="javascript:void(0)" class="closebtn btnClose" onclick="closeNav()">x</a>
+        <a href="../index.html">quienes somos</a>
         <a href="../fabrica/fabrica.html">fabrica</a>
         <a href="../cerveceria/cerveceria.html">cerveceria</a>
         <a href="../tienda/tienda.html">tienda</a>
-        <a href="../carrito/carrito.html">carrito</a>
+        
       </div>
-      <span class="menu-btn" onclick="openNav()">&#9776;</span>
+      <span class="menu-btn" onclick="openNav()"><!-- &#9776; --><img class="menuBot" src="../assets//menu.svg"></span>
+    </div>
+    <div class=" boarNav col-6"> 
+        <p>Boar</p>
+        </div>
+    <div class="col-3 cart"> 
+        <a href="../carrito/carrito.html"><img src="../assets/Carrito.svg" class="bi bi-cart2" id="btnCart"><!-- <b id=qCarritoBtn> --></b></a>
+    </div>
+</div>
 </nav>
 </header>
 <!---------------------------------- Carrito------------------------------------------------------------->
@@ -33,32 +44,31 @@
         <h1 class="tituloPagina">carrito</h1>
     </div>
     <!---------------------------------- Tabla------------------------------------------------------------->
-    <div class="row col-lg-12 tabla">
-    <div class=" col-lg-8 ">
-        <div class="row">
-            <div class="col-lg-6"><p class="tituloTabla">producto</p></div>
-            <div class="col-lg-2"><p class="tituloTabla">precio</p></div>
-            <div class="col-lg-2"><p class="tituloTabla">cantidad</p></div>
-            <div class="col-lg-2"><p class="tituloTabla">total</p></div>
+    <div class="tabla col-lg-8 col-md-8 col-sm-8 offset-1">
+        <table class="table col-lg-8 ">
+            <thead>
+              <tr>
+                <th scope="col" class="tituloTabla col-lg-4">producto</th>
+                <th scope="col"  class="tituloTabla col-lg-4">cantidad</th>
+                <th scope="col"  class="tituloTabla col-lg-4">precio</th>
+            </tr>
+            </thead>
+            <tbody class="linea2" id="carritoTabla">
+            </tbody>
+          </table>
+          <div>
+            <div id="total" colspan="3"></div>
+          </div>  
+          <div class="botones">
+            <div class="col-lg-6 col-md-6 col-sm-12 btnComprar "><button class="botonVaciar">Vaciar Carrito</button></div>
+            <div class="col-lg-6 col-md-6 col-sm-12 btnComprar"><a href="../pago/pago.html"><button class="btnCarritoComprar">Finalizar Compra</button></a></div>
           </div>
-        <div class="row linea2">
-            <div class="col-lg-6 imgProducto"><img class="imagenCarrito" src="../assets/Gingerx6.png" alt=""></div>
-            <div class="col-lg-2"><p class="datosTabla">$990</p></div>
-            <div class="col-lg-2"><p class="datosTabla">2</p></div>
-            <div class="col-lg-2"><p class="datosTabla">$1980</p></div>
         </div>
-        <div class="row botones">
-            <div class="col-lg-6 botonVer"><button class="btnCarritoVer">Vaciar Carrito</button></div>
-            <div class="col-lg-6 btnComprar"><a href="../pago/pago.html"><button class="btnCarritoComprar">Comprar</button></a></div>
-        </div>
-    </div>
-    </div>
-    
 
 <!---------------------------------- FOOTER-------------------------------------------------------------->
 <footer>
     <div class="row" id="mapa">
-        <div class="col-lg-6 mapaIframe">
+        <div id="mapaNo" class="col-lg-6 mapaIframe">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.141343982789!2d-54.87268368504201!3d-34.90290228089592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95751d61dbd64023%3A0x29aaa60ab9ffb824!2sBOAR%20Cervecer%C3%ADa!5e0!3m2!1sen!2suy!4v1638134264451!5m2!1sen!2suy" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div id="direccion">
@@ -77,9 +87,12 @@
         <form action="" id="suscripcion" class="col-lg-6">
         <label for="Text" class="email">Ingresa tu correo electronico</label>
         <input type="text" class="input">
-        <button type="submit" class="btnSubmit"> Enviar</button>
         </form>
-    </div>
+        </div>
+        <div>
+            <button class="btnSubmit" id="enviar"> Enviar</button>
+            <p id="mensaje" style="display:none">GRACIAS POR TU SUSCRIPCION</p>
+        </div>
     <div>
         <p class="cervezaBoar">#cervezaboar</p>
     </div> 
@@ -94,7 +107,11 @@
         <p class="textoFooter">Diseño exclusivo para @cervezaboar powered by Martin Colaroff</p>
     </div>
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../tienda/tienda.js"></script>
+    <script src="../carrito/carrito.js"></script>
     </main>
     </body>
     
+

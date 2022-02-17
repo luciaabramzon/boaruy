@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>BOAR</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="Copyright" content ="derechos reservados">
+    <script src="https://use.fontawesome.com/0cc025511d.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./home/index.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+<body>
+ <!--     <div class="modal" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" >
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cerrarModal" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+     <input type="checkbox" id="cerrar">
+ <label for="cerrar" id="btn-cerrar">x</label>
+ <div class="modal">
+    <div class="contenido">
+        <h2 class="textoModal">¿eres mayor?</h2>
+        <div class="botones">
+        <button class="btnModal" id="cerrarModal">Soy mayor de edad</button>
+        <a href="https://www.google.com" class="googleBtn"><button class="btnModal marginSoyMenor menorEdad"  >Soy menor de edad</button></a>
+    </div>
+    </div>
+ </div>  
+<!---------------------------------- NAV BAR-------------------------------------------------------------->
+<header class="sticky-top">
+    <nav class="nav-bar">
+        <div class="nav1">
+        <div class="nav1  col-3 ">
+        <div id="side-menu" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn btnClose" onclick="closeNav()">x<!-- &times; --></a>
+            <a href="./index.html">quienes somos</a>
+            <a href="./fabrica/fabrica.html">fabrica</a>
+            <a href="./cerveceria/cerveceria.html">cerveceria</a>
+            <a href="./tienda/tienda.html">tienda</a>
+            
+          </div>
+          <span class="menu-btn" onclick="openNav()"><!-- &#9776; --><img class="menuBot" src="./assets/menu.svg"></span>
+        </div>
+                <div class=" boarNav col-6"> 
+            <p>Boar</p>
+        </div>
+        <div class=" cart col-3"> 
+            <a href="./carrito/carrito.html"><img src="./assets/Carrito.svg" class="bi bi-cart2" id="btnCart"><b id=qCarritoBtn></b></a>
+        </div>
+    </div>
+    </nav>
+    </header>
+
+<!---------------------------------- HOME-------------------------------------------------------------->
+
+<main>
+    <!--Runas-->
+    <div class="col-lg-12 runas row">
+    </div>
+    <!--Runas Mobile-->
+    <div class="col-lg-12 runasMobile row">
+    </div>
+    <div id="video" >
+        <iframe width="50%" height="450" src="https://www.youtube.com/embed/aZ---XY8ih8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col-lg-6 quienesSomosVideo">
+            <div class="quienesSomosTexto">
+                <h4 class="quienesSomosTitulo">Quienes Somos</h4>
+                <div class="col-md-12 divQuienesSomos">
+                <p class="quienesSomosParrafo col-md-6">Somos una joven cervecería con un producto único en el mercado. En 2013 comenzamos en este camino, con la finalidad de lograr una cerveza artesanal y de excelente calidad. Apuntamos a utilizar productos locales y naturales que le brindan sabores unicos a nuestras cervezas.</p>
+                </div>   
+                <a href="./fabrica/fabrica.html" class="botonVerMas"><button class="btnQuienesSomos">Ver Mas</button></a>
+            </div>
+        </div>
+    </div>
+<!--     <div id="video" class="row">
+        <iframe width="100%" height="600px" src="https://www.youtube.com/embed/ia5pVn4dEbk?&autoplay=1 " title="Video Boar" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen   ></iframe>
+    </div> -->
+<!-- <div id="quienesSomos" class="row ">
+    <div class="col-lg-6 estampaDiv">
+        <img id="estampaBoar" src="./assets/estampa-boar.png" alt="">
+    </div>
+    <div class="col-lg-6 quienesSomosTexto">
+        <h4 class="quienesSomosTitulo">Quienes Somos</h4>
+        <div class="col-lg-8 col-md-12 divQuienesSomos">
+        <p class="quienesSomosParrafo col-lg-12 col-md-6">Somos una joven cervecería con un producto único en el mercado. Desde 2013 comenzamos en este camino y hoy hacemos lo que más nos gusta….cerveza</p>
+            <a href="./fabrica/fabrica.html" class="botonVerMas"><button class="btnCarrito">Ver Mas</button></a>
+    </div> -->
+    </div>
+    </div>
+    <!---------------------------------- NUESTROS SABORES-------------------------------------------------------------->
+
+    <div id="nuestrosSaboresDiv" class="row">
+        <img id="nuestrosSabores" src="./assets/NUESTROS-SABORES.png" alt="">
+    </div>
+    <div id="botellas" class="row">
+        <div class="divBotellas">
+            <div class="runasMedia">
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="blonde" src="./assets/blonde.png" alt=""></div>
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="hidromiel" src="./assets/hidrom.png" alt=""> </div>
+            </div>
+            <div  class="runasMedia">
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="ginger" src="./assets/gingerr.png" alt=""></div>
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="cardamomo" src="./assets/cardamomo.png" alt=""></div>
+        </div>
+        </div>
+        <div class="divBotellas botellas2">
+            <div  class="runasMedia">
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="choco" src="./assets/choco.png" alt=""></div>
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="baltic" src="./assets/baltic.png" alt=""> </div>
+        </div>
+            <div class="runasMedia">
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="mandarin" src="./assets/madnarin.png" alt=""> </div>
+            <div class="col-lg-6 col-sm-6"> <img class="botellasRunas" id="ipa" src="./assets/ipa.png" alt=""></div>
+                </div>
+        </div>
+     
+        <div id="selloDiv">
+            <img id="sello" src="./assets/sello.png" alt="">
+        </div>
+     </div>
+     <!---------------------------------- BOTELLAS-------------------------------------------------------------->
+
+     <div class="row">
+         <img id="botellasFinal" src="./assets/Proy boar-82edited.jpg" alt="">
+     </div>
+     <!---------------------------------- PRODUCTOS SUGERIDOS-------------------------------------------------------------->
+
+     <div id="prodSugeridos" class="row">
+         <h4 class="subtitulos">Productos Sugeridos</h4>
+         <div class="divBotellas">
+        <div class="productos col-lg-3 col-sm-12" id="prodDestacados1" >
+        </div>
+        <div class="productos col-lg-3 col-sm-12" id="prodDestacados2">
+        </div>
+        <div class="productos col-lg-3 col-sm-12"id="prodDestacados3">
+        </div>
+    </div>
+    </div>
+    <!---------------------------------- FOOTER-------------------------------------------------------------->
+<footer class="row">
+<div id="mapa">
+    <div id="mapaNo" class="col-lg-6 mapaIframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.141343982789!2d-54.87268368504201!3d-34.90290228089592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95751d61dbd64023%3A0x29aaa60ab9ffb824!2sBOAR%20Cervecer%C3%ADa!5e0!3m2!1sen!2suy!4v1638134264451!5m2!1sen!2suy" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div id="direccion">
+        <h4 class="subtitulos tituloDireccion ">¿Dónde encontrarnos?</h4>
+        <p class="textoDireccion">Av. Juana de America & Tito Cabano</p>
+        <p class="textoDireccion">El Tesoro, Maldonado, Uruguay</p>
+        <p class="textoDireccion">Tel: +598 94 37 3604</p>
+        <p class="textoDireccion">Mail: cervezaboar@gmail.com</p>
+    </div>
+</div>  
+<div id="comunidad">
+    <div>
+    <p class="subtitulos">Sumate a nuestra comunidad</p>
+    <p class="textoSuscripcion">Novedades, lanzamientos, eventos, noticias</p>
+    <div class="col-lg-12 formSuscripcion">
+    <form action="" id="suscripcion" class="col-lg-6">
+    <label for="Text" class="email">Ingresa tu correo electronico</label>
+    <input type="text" class="input">
+    </form>
+    </div>
+    <div>
+        <button class="btnSubmit" id="enviar"> Enviar</button>
+        <p id="mensaje" style="display:none">GRACIAS POR TU SUSCRIPCION</p>
+    </div>
+<div>
+    <p class="cervezaBoar">#cervezaboar</p>
+</div> 
+<div class="row redes">
+    <div class="row redesBoton" ><i class="bi bi-facebook"></i></div>
+    <div class="row redesBoton"><i class="bi bi-instagram"></i></div>
+    <div class="row redesBoton"><i class="bi bi-twitter"></i></div>
+</div>
+</div>
+</div>
+<div class="footerFinal">
+    <p class="textoFooter">Diseño exclusivo para @cervezaboar powered by Martin Colaroff</p>
+</div>
+</footer>
+</main> 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="./js/productos.js"></script>
+<script src="./home/index.js"></script>
+<script src="./carrito/carrito.js"></script>
+</body> 

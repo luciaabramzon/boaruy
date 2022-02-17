@@ -24,6 +24,10 @@ body{
   font-family:mjolnir ;
   src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
 /*------------------- MENU ---------------------------*/
 .sticky-top{
   position: -webkit-sticky;
@@ -91,22 +95,179 @@ body{
     margin-right:0px !important;
     margin-left:0px !important
   }
+  #btnCart{
+    width: 40px;
+  }
+  .menuBot{
+    width: 40px;
+    display: flex;
+  }
+  #qCarritoBtn {
+    color: #e8d6bb;
+    font-family: 'viking';
+    font-size: 0.7em;
+}
+ 
+.nav1{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.boarNav{
+  font-family: sultan;
+  color: #e8d6bb;
+  font-size: 3em;
+}
+  .cart a{
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 8px 8px 32px;
+    font-family: sultan;
+    text-decoration: none;
+    font-size: 50px;
+    color: #e8d6bb;
+  }
+  .btnClose{
+    font-family: carrito !important;
+    font-size: 2em !important;
+
+  }
 
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+   /*------------------- MODAL ---------------------------*/
+
+  .modal{
+  width: 750px;
+  height: 400px;
+  position: absolute;
+  background-image: url(../assets/modal.jpg);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  top:0;
+  left:0;
+  display: flex;
+
+  animation: modal 2s 3s forwards;
+  visibility: hidden;
+  opacity: 0; 
+}
+.contenido{
+  width: 40%;
+  height: 40%;
+  margin: auto;
+}
+.textoModal{
+  font-size: 5em;
+    text-align: center;
+    font-family: 'viking';
+    color: #e8d6bb;
+}
+.botones{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.googleBtn{
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.marginSoyMenor{
+  margin-top: 5%;
+}
+#cerrar{
+  display: none;
+}
+#cerrar + label{
+  position: absolute;
+  z-index: 9999;
+  font-family: carrito;
+  color: #6c5d35;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  right: 10px;
+  cursor: pointer;
+  animation: modal 2s 3s forwards;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#cerrar:checked + label, #cerrar:checked ~.modal{
+  display: none;
+}
+@keyframes modal{
+  100% {
+    visibility: visible;
+  opacity: 1;
+  }
+} 
+.btnModal{
+    background-color: #6c5d35;
+    color: #e8d6bb;
+    font-family: 'Raleway', sans-serif;
+    border: 0px;
+    border-radius: 3px;
+    height: 40px;
+}
+/*---runas---*/
+.runas{
+  background: url(../assets/Banner-principal-2.jpg);
+  padding: 0px !important;
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float:none !important;
+}
+.runasMobile{
+  display: none;
+}
+/*---video*/
+#video{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0.5%;
+}
+.quienesSomosVideo{
+  display: flex;
+  align-items: center;
+}
   /*------------------- QUIENES SOMOS ---------------------------*/
  #quienesSomos{
-  background-image: url(../assets/portada-fabrica.jpg);;
+/*   background-image: url(../assets/QSomos.jpg);;
    background-position: center;
-   background-size: 100%;
+   background-size: 100%; */
    width: 100%;
    margin:0px !important;
+   height: 500px;
+   display: flex;
+ }
+ .btnQuienesSomos{
+  background-color: #6c5d35;
+  color: #e8d6bb;
+  font-family: 'Raleway', sans-serif;
+  border: 0px;
+  border-radius: 3px;
+  height: 40px;
+  width: 52%;
  }
  .estampaDiv{
    display: flex;
    justify-content: center;
+   align-items: center;
  }
   #estampaBoar{
     height:50%;
@@ -118,20 +279,32 @@ body{
       display: flex;
       flex-direction: column;
       justify-content: center;
-     }
+    } 
   .quienesSomosTitulo{
     font-family:viking ;
-    color: #e8d6bb;
-    font-size:8em;
+    color: #6c5d35;
+    font-size:6em;
+    margin: auto;
   }
   .divQuienesSomos{
     display: flex;
-    padding-left:0px !important
+    padding-left:0px !important;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .botonVerMas{
+   display: flex;
+   justify-content: center;
   }
   .quienesSomosParrafo{
     font-family: 'Raleway', sans-serif;
-    color: #e8d6bb;
+    color: #6c5d35;
     font-size: 1.3em;
+    padding: 0px !important;
+   }
+   a{
+     text-decoration: none !important;
    }
     /*------------------- NUESTROS SABORES ---------------------------*/
     #nuestrosSabores{
@@ -141,7 +314,6 @@ body{
       margin-bottom: 0.3%;
     }
     #selloDiv{
-      background-image:url(../assets/textureBlack.png);
       height: 4em;
     }
     #sello{
@@ -154,7 +326,9 @@ body{
     }
       /*------------------- BOTELLAS ---------------------------*/
       #botellas{
-        background-image:url(../assets/textureBlack.png)
+        background-image:url(../assets/textureBlack.png);
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .divBotellas{
         display: flex;
@@ -170,37 +344,38 @@ body{
         margin-top: 3%;
       }
       #blonde:hover{
-        content: url(../assets/BotellaB.png);
-       height: 90%;
+       content: url(../assets/nBlonde.png);
+
+      
       }
       #hidromiel:hover{
-        content: url(../assets/botellaHidro.png);
-       height: 90%;
+        content: url(../assets/nHidro.png);
+      
       }
       #ginger:hover{
-        content: url(../assets/botellaGinger.png);
-       height: 90%;
+        content: url(../assets/nGinger.png);
+ 
       }
       #cardamomo:hover{
-        content: url(../assets/carda.png);
-       height: 90%;
+        content: url(../assets/nCarda.png);
+
       }
       #mandarin:hover{
-        content: url(../assets/mandarinBotella.png);
-       height: 90%;
+        content: url(../assets/nMandarin.png);
+        
       }
       #ipa:hover{
-        content: url(../assets/botellaIpa.png);
-       height: 90%;
+        content: url(../assets/nIpa.png);
+       
       }
       #choco:hover{
-        content: url(../assets/botellaChoco.png);
-       height: 90%;
+        content: url(../assets/nChoco.png);
+      
        
       }
       #baltic:hover{
-        content: url(../assets/botellaBaltic.png);
-       height: 90%;
+        content: url(../assets/nBaltic.png);
+        
       }
 /*------------------- BOTELLAS FINAL---------------------------*/
       #botellasFinal{
@@ -208,24 +383,28 @@ body{
         width: 100%;
       }
 /*------------------- PRODUCTOS SUGERIDOS---------------------------*/
-      #productosSugeridos{
+      #prodSugeridos{
         margin-top: 1%;
         background-image: url(../assets/ZenBG.png);
       }
       .subtitulos{
         font-family: viking;
-        font-size:5em;
+        font-size:6em;
         text-align:center;
         color: #6c5d35;
       }
       .imgProductos{
         width: 50%;
+        display: flex;
+        margin:0 auto;
       }
       .productos{
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
+          margin-bottom: 3%;
+        }
+      
       .textoProductoDestacados{
         font-family: 'Raleway', sans-serif;
         font-size: 1em;
@@ -324,6 +503,20 @@ body{
 .btnSubmit:hover{
   color: #ec9616;
 }
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin: 0 auto;
+}
+#mensaje{
+  font-family: viking;
+  display: flex;
+  justify-content: center;
+  color: #6c5d35;
+  font-size: 3rem;
+}
 .cervezaBoar{
   font-family: mjolnir;
   font-size:2em;
@@ -382,13 +575,136 @@ i{
     width: 100%;
     height: 30px;
   }
-  .quienesSomosTitulo{
-    text-align: center;
-  }
   .divQuienesSomos{
     display: flex;
     justify-content: center;
     margin-bottom: 1%;
   }
+  #estampaBoar {
+    width: 60%;
+    height: auto;
+  }
+  .btnCarrito{
+    width:50%
+  }
+  #enviar{
+    width: 16.5%;
+  }
+}
+
+@media (max-width:700px){
+  .runas{
+    display: none;
+  }
+ iframe{
+    width: 100%;
+  }
+  #video{
+    margin-top: 1%;
+  }
+  .quienesSomosVideo{
+    margin-bottom: 2%;
+    margin-top: 1%;
+  }
+  .runasMobile{
+    background: url(../assets/banner\ mobile.jpeg);
+    padding: 0px !important;
+    height:95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float:none !important;
+    
+  }
+  #estampaBoar{
+    display: none;
+  }
+.divBotellas{
+  flex-direction: column;
+}
+.quienesSomosTitulo{
+  font-size: 4.5em;
+  text-align: center;
+}
+.quienesSomosParrafo{
+  margin-bottom: 8%;
+}
+#selloDiv{
+  display: none;
+}
+.modal{
+  width: 95%;
+}
+.btnCarrito{
+  width: 52%;
+  height: 30px;
+}
+#enviar{
+  width: 52%;
+}
+.sidenav a{
+  font-size: 3em;
+}
+.textoModal{
+  font-size: 4.5em;
+}
+.contenido{
+  margin:auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+
+.runasMedia{
+  display: flex;
+  flex-direction: row;
+}
+.formSuscripcion{
+  margin-bottom: 1%;
+}
+.btnQuienesSomos{
+  width: 100%;
+}
+  #mapaNo{
+    display: none;
+  }
+  #direccion{
+    padding: 0px !important
+    ;
   }
 
+  .tituloDireccion{
+    font-size: 4em;
+  }
+  .textoDireccion{
+    font-size: 1em;
+  }
+  .subtitulos{
+    font-size: 3.5em;
+  }
+  .textoSuscripcion{
+    font-size: 2em;
+  }
+  input{
+    width: 100% !important;
+  }
+  .btnSubmit{
+    width: 100%;
+  }
+  .cervezaBoar{
+    font-size: 1.5em;
+  }
+  .i{
+    font-size:1.3em;
+  }
+  .textoFooter{
+    font-size: 0.8em;
+  }
+}

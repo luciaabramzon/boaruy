@@ -23,6 +23,10 @@ src: url(../fuentes/tipografias/viking/VikingGothicW01-Regular.woff);
 font-family:mjolnir ;
 src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
 /*------------------- MENU ---------------------------*/
 .sticky-top{
   position: -webkit-sticky;
@@ -76,7 +80,18 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 .menu-btn:hover{
   color: #e69612;
 }
-
+#btnCart{
+  width: 40px;
+}
+.menuBot{
+  width: 40px;
+  display: flex;
+}
+#qCarritoBtn {
+  color: #e8d6bb;
+  font-family: 'viking';
+  font-size: 0.7em;
+}
 /* BTN CERRAR SIDE MENU */
 .sidenav .closebtn {
   position: absolute;
@@ -90,18 +105,43 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   margin-right:0px !important;
   margin-left:0px !important
 }
+.nav1{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.boarNav{
+  font-family: sultan;
+  color: #e8d6bb;
+  font-size: 3em;
+}
+.cart a{
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 8px 32px;
+  font-family: sultan;
+  text-decoration: none;
+  font-size: 50px;
+  color: #e8d6bb;
+}
+.btnClose{
+  font-family: carrito !important;
+  font-size: 2em !important;
 
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 /*------------------- FABIRCA ---------------------------*/
-
+.imagenFabrica{
+  display: none;
+}
   
   .fabrica-container {
     padding: 0% !important;
     background-image: url(../assets/portada-fabrica.jpg);
-    height: 600px;
+    height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -128,6 +168,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   font-family: 'Raleway', sans-serif;
   font-size: 1.2em;
   color: #6c5d35;
+
 }
 
 .fabrica {
@@ -137,6 +178,8 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 .fabrica-right{
   padding-right:5px!important;
@@ -156,6 +199,10 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   text-align: center;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+.texto{
+  margin: 5%;
+  text-align: center;
 }
 /*------------------- FOTOS 1 ---------------------------*/
 .imgFabrica1{
@@ -288,6 +335,20 @@ width: 50%;
 .btnSubmit:hover{
 color: #ec9616;
 }
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin: 0 auto;
+}
+#mensaje{
+  font-family: viking;
+  display: flex;
+  justify-content: center;
+  color: #6c5d35;
+  font-size: 3rem;
+}
 .cervezaBoar{
 font-family: mjolnir;
 font-size:2em;
@@ -323,4 +384,107 @@ color: #6c5d35;
   color: #e8d6bb;
   font-size:1em;
   text-align: center;
+}
+/*-------------------Responsive--------------------------*/
+@media (max-width:1200px){
+  .mapaIframe{
+    display: flex;
+    justify-content: center;
+  }
+  #direccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   .tituloDireccion{
+    margin-top:0%;
+  }
+  .fabricaTexto{
+    font-size: 2em;
+  }
+  .input{
+    width: 100%;
+  }
+  .btnSubmit{
+    width: 100%;
+    height: 30px;
+  }
+  .fabrica-right{
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    margin-bottom: 8px;
+  }
+  .img1{
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    margin-bottom: 8px;
+  }
+  #imagenes2{
+    display: none;
+  }
+}
+@media (max-width:700px){
+  #mapaNo{
+    display: none;
+  }
+  .imagenFabrica{
+    width: 100%;
+    display: inline;
+  }
+  .fabricaTexto{
+    font-size: 1.2em;
+  }
+  #direccion{
+    padding: 0px !important
+    ;
+  }
+  .btnCarrito{
+    display: none;
+  }
+  .tituloPagina{
+    font-size:7em;
+  }
+ .fabrica-container{
+   background-size: cover;
+  } 
+  .fabricaTitulo{
+    font-size: 5em;
+  }
+
+  .fabrica-right img{
+      display: none;
+  }
+  .sidenav a{
+    font-size: 3em;
+  }
+  #enviar{
+    width: 52%;
+  }
+  .imagenLateral{
+    display: none;
+  }
+  .tituloDireccion{
+    font-size: 4em;
+  }
+  .textoDireccion{
+    font-size: 1em;
+  }
+  .subtitulos{
+    font-size: 3.5em;
+  }
+  .textoSuscripcion{
+    font-size: 2em;
+  }
+  input{
+    width: 100% !important;
+  }
+  .btnSubmit{
+    width: 100%;
+  }
+  .cervezaBoar{
+    font-size: 1.5em;
+  }
+  .textoFooter{
+    font-size: 0.8em;
+  }
 }

@@ -27,6 +27,10 @@ src: url(../fuentes/tipografias/viking/VikingGothicW01-Regular.woff);
 font-family:mjolnir ;
 src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
 /*------------------- MENU ---------------------------*/
 .sticky-top{
   position: -webkit-sticky;
@@ -90,10 +94,47 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   margin-left: 50px;
   color: #e8d6bb;
 }
+#btnCart{
+  width: 40px;
+}
+.menuBot{
+  width: 40px;
+  display: flex;
+}
+#qCarritoBtn {
+  color: #e8d6bb;
+  font-family: 'viking';
+  font-size: 0.7em;
+}
 
+.btnClose{
+  font-family: carrito !important;
+  font-size: 2em !important;
+
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.nav1{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.boarNav{
+  font-family: sultan;
+  color: #e8d6bb;
+  font-size: 3em;
+}
+.cart a{
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 8px 32px;
+  font-family: sultan;
+  text-decoration: none;
+  font-size: 50px;
+  color: #e8d6bb;
 }
 /*------------------- pago ---------------------------*/
 
@@ -104,7 +145,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   .fabrica-container {
     padding: 0% !important;
     background-image: url(../assets/Proy\ boar-49.jpg);
-    height: 600px;
+    height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -139,9 +180,19 @@ label{
   color: #6c5d35;
 }
 input{
-  width: 50% !important;
-  border-radius: 5px;
   border: 1px solid #6c5d35 !important;
+  margin-bottom: 2%;
+  border-radius: 4px;
+}
+::placeholder{
+  color: #6c5d35 !important;
+}
+.form-control{
+  width:50% !important;
+  background: transparent !important;
+  color: rgba(108,93,53);opacity: 0.5;
+  font-family: viking;
+  font-size: 2em;
 }
 .pagoForm{
   display: flex;
@@ -168,7 +219,7 @@ input{
   width: 80%;
 }
 .botonCompra{
-  text-align: center;
+
   margin-bottom: 2%;
 }
   /*------------------- MAPA---------------------------*/
@@ -258,6 +309,20 @@ width: 50%;
 .btnSubmit:hover{
 color: #ec9616;
 }
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin: 0 auto;
+}
+#mensaje{
+  font-family: viking;
+  display: flex;
+  justify-content: center;
+  color: #6c5d35;
+  font-size: 3rem;
+}
 .cervezaBoar{
 font-family: mjolnir;
 font-size:2em;
@@ -294,3 +359,139 @@ color: #e8d6bb;
 font-size:1em;
 text-align: center;
 }
+/*-------------------RESPONSIVE 1200---------------------------*/
+@media (max-width:1200px){
+  .mapaIframe{
+    display: flex;
+    justify-content: center;
+  }
+  #direccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tituloDireccion{
+    margin-top:0%;
+  }
+  .input{
+    width: 100%;
+  }
+  .botonCompra{
+    text-align: inherit;
+    margin-bottom: 4%;
+  }
+  .divCarritoImagen{
+    margin: auto;
+  }
+  .imgCarrito{
+    width: 90%;
+  }
+  .pagoForm{
+    display:inherit;
+
+  }
+}
+@media (max-width:700px){
+  #mapaNo{
+    display: none;
+  }
+  #direccion{
+    padding: 0px !important
+    ;
+  }
+  .formMobile{
+    margin: auto;
+  }
+  form{
+    text-align: center;
+  }
+  .botonCompra{
+    padding: 0px !important;
+  }
+  .sidenav a{
+    font-size: 3em;
+  }
+  .form-control{
+    width: 100% !important ;
+  }
+    .tituloPagina{
+    font-size:7em;
+  }
+  .fabrica-container{
+   
+    background-size: cover;
+  }
+  .fabricaTitulo{
+    font-size: 3em;
+  }
+  .fabricaTexto{
+    font-size: 0.8em;
+  }
+  .fabrica-right img{
+      display: none;
+  }
+  .imagenProducto{
+   width: 80%;
+  }
+  #producto{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .datosProducto{
+    width: 100%;
+  }
+  .cantidad{
+    width: 30%;
+
+  }
+  .cantidadInput{
+    display: flex;
+    justify-content: center;
+  }
+  .btnCarrito{
+    width: 100%;
+  }
+  .divCarritoImagen{
+    display: none;
+  }
+  .pagoForm{
+    display:inherit;
+
+  }
+  .tituloDireccion{
+    font-size: 4em;
+  }
+  .textoDireccion{
+    font-size: 1em;
+  }
+  .subtitulos{
+    font-size: 3.5em;
+  }
+  .textoSuscripcion{
+    font-size: 2em;
+  }
+  input{
+    width: 100% !important;
+  }
+  .btnSubmit{
+    width: 100%;
+  }
+  .cervezaBoar{
+    font-size: 1.5em;
+  }
+  .formSuscripcion{
+    margin-bottom: 1%;
+  }
+  #enviar{
+    width: 52%;
+  }
+  .i{
+    font-size:1.3em;
+  }
+  .textoFooter{
+    font-size: 0.8em;
+  }
+  .cart{
+    float: left;
+  }
+ }

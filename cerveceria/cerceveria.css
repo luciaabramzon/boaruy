@@ -28,6 +28,10 @@ src: url(../fuentes/tipografias/viking/VikingGothicW01-Regular.woff);
 font-family:mjolnir ;
 src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
 /*------------------- MENU ---------------------------*/
 .sticky-top{
   position: -webkit-sticky;
@@ -72,7 +76,11 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 .sidenav a:hover {
   color: #e69612;
 }
-
+.boarNav{
+  font-family: sultan;
+  color: #e8d6bb;
+  font-size: 3em;
+}
 .menu-btn  {
   font-size:40px;
   cursor:pointer;
@@ -80,6 +88,11 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
 .menu-btn:hover{
   color: #e69612;
+}
+.btnClose{
+  font-family: carrito !important;
+  font-size: 2em !important;
+
 }
 
 /* BTN CERRAR SIDE MENU */
@@ -92,6 +105,33 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   color: #e8d6bb;
 }
 
+#btnCart{
+  width: 40px;
+}
+.menuBot{
+  width: 40px;
+  display: flex;
+}
+#qCarritoBtn {
+  color: #e8d6bb;
+  font-family: 'viking';
+  font-size: 0.7em;
+}
+
+.nav1{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.cart a{
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 8px 32px;
+  font-family: sultan;
+  text-decoration: none;
+  font-size: 50px;
+  color: #e8d6bb;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -103,7 +143,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
     float: none!important;
     padding: 0% !important;
     background-image: url(../assets/1-1.jpg);
-    height: 600px;
+    height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -130,6 +170,10 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   font-family: 'Raleway', sans-serif;
   font-size: 1.2em;
   color: #6c5d35;
+}
+.texto{
+  margin: 5%;
+  text-align: center;
 }
 
 .fabrica {
@@ -172,8 +216,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 /*------------------- imagenes2---------------------------*/
 #imagenes2{
   margin-top: 0.5%;
-  overflow: hidden;
-  height: 600px
+  
 }
 
 #fuego{
@@ -275,6 +318,20 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin: 0 auto;
+}
+#mensaje{
+  font-family: viking;
+  display: flex;
+  justify-content: center;
+  color: #6c5d35;
+  font-size: 3rem;
+}
 .email{
 font-family:'Raleway', sans-serif; ;
 color: #6c5d35;
@@ -334,4 +391,119 @@ font-family: 'Raleway', sans-serif;
 color: #e8d6bb;
 font-size:1em;
 text-align: center;
+}
+
+/*-------------------Responsive--------------------------*/
+@media (max-width:1200px){
+  .mapaIframe{
+    display: flex;
+    justify-content: center;
+  }
+  #enviar{
+    width: 52%;
+  }
+  .fabrica-container{
+   
+    background-size: cover;
+  }
+  .fabricaTexto{
+    font-size: 1.8em;
+  }
+  #direccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tituloDireccion{
+    margin-top:0%;
+  }
+  .input{
+    width: 100%;
+  }
+  .btnSubmit{
+    width: 100%;
+    height: 30px;
+  }
+  .fabrica-right{
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    margin-bottom: 8px;
+  }
+  .img1{
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    margin-bottom: 8px;
+  }
+ #fuego{
+   display: none;
+ }
+ .imgFabrica4{
+   width: 100%;
+   height: auto;
+ }
+ .imgFabrica5{
+   display: none;
+ }
+  .barUltimo{
+    display: none;
+  }
+}
+@media (max-width:700px){
+  #mapaNo{
+    display: none;
+  }
+  #direccion{
+    padding: 0px !important
+    ;
+  }
+   .tituloPagina{
+    font-size:7em;
+  }
+  .sidenav a{
+    font-size: 3em;
+  }
+  .fabricaTitulo{
+    font-size: 5em;
+  }
+  .fabricaTexto{
+    font-size:1.2em;
+    margin: 1%;
+    text-align: justify;
+  }
+  .fabrica-right img{
+      display: none;
+  }
+  .imagenLateral{
+    display: none;
+  }
+  .tituloDireccion{
+    font-size: 4em;
+  }
+  .textoDireccion{
+    font-size: 1em;
+  }
+  .subtitulos{
+    font-size: 3.5em;
+  }
+  .textoSuscripcion{
+    font-size: 2em;
+  }
+  input{
+    width: 100% !important;
+  }
+  .btnSubmit{
+    width: 100%;
+  }
+  .cervezaBoar{
+    font-size: 1.5em;
+  }
+  .i{
+    font-size:1.3em;
+  }
+  .formSuscripcion{
+    margin-bottom: 1%;
+  }
+  .textoFooter{
+    font-size: 0.8em;
+  }
 }

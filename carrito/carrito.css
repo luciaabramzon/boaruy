@@ -27,6 +27,14 @@ src: url(../fuentes/tipografias/viking/VikingGothicW01-Regular.woff);
 font-family:mjolnir ;
 src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
+@font-face{
+  font-family: carrito;
+  src: url(../fuentes/Rurikvikingfont-Regular.ttf);
+}
 /*------------------- MENU ---------------------------*/
 .sticky-top{
   position: -webkit-sticky;
@@ -90,7 +98,44 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   margin-left: 50px;
   color: #e8d6bb;
 }
+#btnCart{
+  width: 40px;
+}
+.menuBot{
+  width: 40px;
+  display: flex;
+}
+#qCarritoBtn {
+  color: #e8d6bb;
+  font-family: 'viking';
+  font-size: 0.7em;
+}
 
+.nav1{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.boarNav{
+  font-family: sultan;
+  color: #e8d6bb;
+  font-size: 3em;
+}
+.cart a{
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 8px 32px;
+  font-family: sultan;
+  text-decoration: none;
+  font-size: 50px;
+  color: #e8d6bb;
+}
+
+.btnClose{
+  font-family: carrito !important;
+  font-size: 2em !important;
+
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -104,7 +149,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   .fabrica-container {
     padding: 0% !important;
     background-image: url(../assets/Proy\ boar-93.jpg);
-    height: 600px;
+    height: 95vh;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -128,7 +173,7 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 }
 /*-------------------TABLA---------------------------*/
 .imagenCarrito{
-  width:20%;
+  width:30%;
 }
 .imgProducto{
   display: flex;
@@ -138,28 +183,76 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   font-family: viking;
   color: #6c5d35;
   font-size:4em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  font-weight: lighter;
+
+}
+#total{
+  font-family: viking;
+  color: #6c5d35;
+  font-size:4em;
+  text-align: end;
 }
 .datosTabla{
+  font-family: viking;
+  color: #6c5d35;
+  font-size:4em;
+  display: flex;
+  flex-direction: row;
+  
+}
+th,td{
+  border-top:none!important;
+}
+
+.productoNombreCarrito{
   font-family: 'Raleway', sans-serif; 
   color: #6c5d35;
-  font-size:1.5em;
+  font-size:1em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
+
+.productosCart{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+.linea1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.datosTablaDiv{
+  display: flex;
+}
+.datosCantidad{
+  display: flex !important;
+  flex-direction: row;
+}
+.cantidad-,.cantidad,.cantidadTotal,.eliminar{
+  margin:5%;
+  background-color: transparent;
+  border: none;
+  font-family: carrito;
+  color: #6c5d35;
+  font-size: 2em;
+}
+.cantidadTotal{
+  margin:5%;
+  background-color: transparent;
+  border: none;
+  font-family: viking;
+  color: #6c5d35;
+  font-size: 2em;
+}
+
 .linea2{
-  display: flex;
+  
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.botones{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .btnCarritoVer{
   background-color: #6c5d35;
   color: #e8d6bb;
@@ -168,6 +261,17 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
   border-radius: 3px;
   height:40px;
   width: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.botonVaciar{
+  background-color: #6c5d35;
+  color: #e8d6bb;
+  font-family: 'Raleway', sans-serif;
+  border: 0px;
+  border-radius: 3px;
+  height:40px;
+  width: 50%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -186,12 +290,11 @@ src: url(../fuentes/tipografias/Mjölnir/Mjolnir.woff2);
 .btnCarritoComprar:hover{
   color: #ec9616;
 }
-.btnCarritoVer:hover{
+.botonVaciar:hover{
   color: #ec9616;
 }
 .btnComprar{
-text-align: end;
-  
+  text-align: center;
 }
 .botonVer{
   display: flex;
@@ -203,10 +306,13 @@ text-align: end;
   border-radius: 5px;
 }
 .tabla{
-  margin-top: 2%;
-  display: flex;
-  justify-content: space-around;
-}
+  margin-top: 4%;
+  float: none !important;
+  margin: 0 auto;
+ }
+ .table>tbody>tr>td{
+  vertical-align: baseline !important;
+ }
   /*------------------- MAPA---------------------------*/
   #mapa{
     margin-top: 5%;
@@ -297,6 +403,20 @@ width: 50%;
 .btnSubmit:hover{
 color: #ec9616;
 }
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin: 0 auto;
+}
+#mensaje{
+  font-family: viking;
+  display: flex;
+  justify-content: center;
+  color: #6c5d35;
+  font-size: 3rem;
+}
 .cervezaBoar{
 font-family: mjolnir;
 font-size:2em;
@@ -329,4 +449,116 @@ font-family: 'Raleway', sans-serif;
 color: #e8d6bb;
 font-size:1em;
 text-align: center;
+}
+/*-------------------RESPONSIVE 1200---------------------------*/
+@media (max-width:1200px){
+  .mapaIframe{
+    display: flex;
+    justify-content: center;
+  }
+  .fabrica-container{
+  
+    background-size: cover;
+  }
+  #direccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tituloDireccion{
+    margin-top:0%;
+  }
+  .input{
+    width: 100%;
+  }
+  .btnSubmit{
+    width: 100%;
+    height: 30px;
+  }
+} 
+@media (max-width:700px){
+  #mapaNo{
+    display: none;
+  }
+ 
+  #direccion{
+    padding: 0px !important
+    ;
+  }
+  .tituloPagina{
+    font-size:7em;
+  }
+  .formSuscripcion{
+    margin-bottom: 1%;
+  }
+  #enviar{
+    width: 52%;
+  }
+  .fabricaTitulo{
+    font-size: 3em;
+  }
+  .fabricaTexto{
+    font-size: 0.8em;
+  }
+  .tituloTabla{
+    font-size: 3em;
+  }
+  .imagenCarrito{
+    width:35%;
+  }
+  .productoNombreCarrito{
+    font-family:'Raleway', sans-serif; 
+    font: size 1.2em;
+    text-align:start;
+    color: #6c5d35;
+  }
+  .imgProducto{
+    display:none;
+    justify-content: flex-start;
+  }
+  .botonVaciar,.btnCarritoComprar{
+    width: 100%;
+  }
+  .datosTablaDiv{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .btnCarritoVer{
+    width: 100%;
+  }
+  .btnComprar{
+    width: 100%;
+  }
+  .tituloDireccion{
+    font-size: 4em;
+  }
+  .textoDireccion{
+    font-size: 1em;
+  }
+  .subtitulos{
+    font-size: 3.5em;
+  }
+  .textoSuscripcion{
+    font-size: 2em;
+  }
+  input{
+    width: 100% !important;
+  }
+  .btnSubmit{
+    width: 100%;
+  }
+  .cervezaBoar{
+    font-size: 1.5em;
+  }
+  .datosTabla{
+    font-size:3.5em
+  }
+  .cantidad-,.cantidad,.cantidadTotal,.eliminar,.cantidadTotal{
+    font-size: 2.5em;
+    margin:none;
+  }
+
+  .textoFooter{
+    font-size: 0.8em;
+  }
 }
