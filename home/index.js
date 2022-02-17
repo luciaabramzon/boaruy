@@ -39,7 +39,7 @@ function openNav() {
         `<div class="productos col-sm-12 ">
          <img class="imgProductos"  src=${destacados1.imgIndex} alt="">
             <p class="textoProductoDestacados">${destacados1.nombre} </p>
-            <p class="textoProductoDestacados">$ ${destacados1.precio} </p>
+            <p class="textoProductoDestacados">Precio $ ${destacados1.precio} </p>
             <button id="producto_${destacados1.id}" class="btnCarrito" > Comprar</button></a>
         </div>`
     )
@@ -53,7 +53,7 @@ function openNav() {
       `<div class="productos col-sm-12">
        <img class="imgProductos"  src=${destacados2.imgIndex} alt=""> 
           <p class="textoProductoDestacados">${destacados2.nombre} </p>
-          <p class="textoProductoDestacados">$ ${destacados2.precio} </p>
+          <p class="textoProductoDestacados">Precio $ ${destacados2.precio} </p>
           <button id="producto_${destacados2.id}" class="btnCarrito" >Comprar</button></a>
       </div>`
   )
@@ -67,7 +67,7 @@ function openNav() {
     `<div class="productos col-sm-12">
      <img class="imgProductos"  src=${destacados3.imgIndex} alt=""> 
         <p class="textoProductoDestacados">${destacados3.nombre} </p>
-        <p class="textoProductoDestacados">$ ${destacados3.precio} </p>
+        <p class="textoProductoDestacados">Precio $ ${destacados3.precio} </p>
         <button id="producto_${destacados3.id}" class="btnCarrito" > Comprar</button></a>
     </div>`
 )
