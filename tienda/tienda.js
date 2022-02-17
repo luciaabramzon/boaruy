@@ -35,7 +35,7 @@ for (const producto of productos){
         <div class="productos col-lg-4 col-sm-12">
         <a  href="../producto/producto.html" class="divVerMas"> <img class="imgProductos" id="verMas_${producto.id}"  src=${producto.imagen} alt="">  </a>
             <p class="textoProductoDestacados">${producto.nombre} </p>
-            <p class="textoProductoDestacados"> ${producto.precio} </p>
+            <p class="textoProductoDestacados">Precio $ ${producto.precio} </p>
             <button id="producto_${producto.id}" class="btnCarrito col-lg-5" > Comprar </button></a>
             </div>`
      /*        `
