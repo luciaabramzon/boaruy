@@ -190,7 +190,7 @@ input{
 .form-control{
   width:50% !important;
   background: transparent !important;
-  color: rgba(108,93,53);opacity: 0.5;
+  color:#6c5d35;
   font-family: viking;
   font-size: 2em;
 }
@@ -413,6 +413,7 @@ text-align: center;
   }
   .form-control{
     width: 100% !important ;
+    height: 100%;
   }
     .tituloPagina{
     font-size:7em;
